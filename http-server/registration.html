@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>registration forum</title>
+    <style>
+       body{
+        font-family: Arial, Helvetica, sans-serif;
+       }
+       .form-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh; /* vh stands for viewport height */
+    }
+    table,th,td{
+        border: 1px solid black;
+        border-collapse: collapse;
+    }
+    table.center{
+        margin-left: auto;
+        margin-right: auto;
+    }
+    </style>
+</head>
+<body>
+    <div class="form-container">
+    <form id="data">
+        <fieldset>
+        <legend style="text-align: center;">Registration Form</legend>
+        <label for="name" >Name:  </label>
+        <input  type="text" placeholder="Enter full name"id="name" name="name"  autocomplete="name"><br><br>
+
+        <label for="email">Email:</label>
+        <input type="email" placeholder="Enter email" id="email" name="email" autocomplete="email" required><br><br>
+
+        <label for="password">password:</label>
+        <input type="password" placeholder="Enter password" id="password" name="password" autocomplete="new-password" required><br><br>
+
+        <label for="dob">Date of Birth:</label>
+        <input type="date" placeholder="dd/mm/yyyy" id="dob" name="dob" autocomplete="bday" required><br><br>
+        <input id="checkbox" type="checkbox">
+        <label for="checkbox">Accept terms & Conditions </label><br><br>
+        
+        <button type="submit" style="background-color: rgb(67, 234, 67); ">submit</button>
+        </fieldset>
+    </form>
+    </div>
+    <div>
+        <h2 style="text-align: center;"><b>Entries</b></h2>
+        <div id="entries"></div>
+    </div>
+<script src="./registration.js"></script>
+</body>
+</html>
