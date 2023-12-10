@@ -41,7 +41,7 @@ describe("Todolist Test suite", () => {
       dueDate: yes,
     };
     add(y);
-    expect(overdue().length.toBe(1));
+    expect(overdue().length).toBe(1);
   });
   test("Should retrive due today items", () => {
     expect(dueToday().length).toBe(2);

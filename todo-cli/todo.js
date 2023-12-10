@@ -53,4 +53,17 @@ const todoList = () => {
     toDisplayableList,
   };
 };
+const todos = todoList();
+const formate = (d) => {
+  return d.toISOString().split("T")[0];
+};
+var datet = new Date();
+const today = formate(datet);
+const yes = formate(new Date(new Date().setDate(datet.getDate() - 1)));
+const tmrow = formate(new Date(new Date().setDate(datet.getDate() + 1)));
+todos.add({ title: "Submit assignment", dueDate: yes, completed: false });
+todos.add({ title: "Pay rent", dueDate: today, completed: true });
+todos.add({ title: "Service Vehicle", dueDate: today, completed: false });
+todos.add({ title: "File taxes", dueDate: tmrow, completed: false });
+todos.add({ title: "Pay electric bill", dueDate: tmrow, completed: false });
 module.exports = todoList;
